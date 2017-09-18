@@ -73,7 +73,6 @@ void AppManager::setupManagers()
     m_ledsManager.setup();
     m_noiseManager.setup();
     m_imageManager.setup();
-    m_outputDataManager.setup();
     m_videoManager.setup();
     m_audioVisualsManager.setup();
     m_guiManager.setup();

@@ -80,7 +80,6 @@ void ImageManager::onRecordingChange(bool& value)
     
     m_isRecording = value;
     
-    AppManager::getInstance().getOutputDataManager().onRecordingChange(value);
 }
 
 

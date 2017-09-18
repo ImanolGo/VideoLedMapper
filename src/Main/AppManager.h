@@ -23,7 +23,6 @@
 #include "LedsManager.h"
 #include "NoiseManager.h"
 #include "ImageManager.h"
-#include "OutputDataManager.h"
 #include "VideoManager.h"
 #include "AudioVisualsManager.h"
 #include "MouseManager.h"
@@ -93,9 +92,6 @@ public:
     //! Returns the audio visuals manager
     AudioVisualsManager&   getAudioVisualsManager() { return m_audioVisualsManager; }
     
-    //! Returns the output data manager
-    OutputDataManager&   getOutputDataManager() { return m_outputDataManager; }
-
     
     //==========================================================================
     
@@ -141,9 +137,8 @@ private:
     LedsManager              m_ledsManager;              ///< Manages the costume leds
     NoiseManager             m_noiseManager;             ///< Manages the noise visuals
     VideoManager             m_videoManager;             ///< Manages the video  visuals
-    ImageManager             m_imageManager;             ///< Manages the images to be exported
     AudioVisualsManager      m_audioVisualsManager;      ///< Manages the audio reactive visuals
-    OutputDataManager        m_outputDataManager;        ///< Manages the output data manager
+    ImageManager             m_imageManager;             ///< Manages the image to be exported
 
     bool                     m_debugMode;
     bool                     m_initialized;
