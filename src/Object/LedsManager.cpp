@@ -68,49 +68,49 @@ void LedsManager::setupLeds()
 
 void LedsManager::createLedsPosition()
 {
-//    float x_offset = 0.05;
-//    float y_offset = 0.05;
-//    int num_rows = 20;
-//    int num_cols = 19;
+    int num_rows = 138;
+    int num_cols = 1;
+    float x_offset = 0.01;
+    float y_offset = 0.01;
+    
+    float w = (1- x_offset*2)/num_cols;
+    float h = (1- y_offset*2)/num_rows;
+    
+    for(int i = 0; i< num_rows; i++){
+        for(int j = 0; j< num_cols; j++){
+            
+            float x = 0.5;
+            float y =  y_offset + i*h;
+            
+            ofPoint ledPosition(x,y,0.0);
+            createLed(ledPosition);
+        }
+    }
+    
+//    float x_offset_even = 0.127;
+//    float x_offset_odd = 0.070;
+//    float y_offset = 0.042;
+//    int num_rows = 37;
+//    int num_cols = 8;
 //    
-//    float w = (1.0 - 2.0*x_offset)/num_cols;
-//    float h = (1.0 - 2.0*y_offset)/num_rows;
+//    float w = 0.114;
+//    float h = 0.0258;
 //    
 //    for(int i = 0; i< num_rows; i++){
 //        for(int j = 0; j< num_cols; j++){
 //            
-//            float x = x_offset + j*w;
+//            float x = x_offset_odd + j*w;
+//            
+//            if(i%2==0){
+//                x = x_offset_even + j*w;
+//            }
+//            
 //            float y = y_offset + i*h;
 //            
 //            ofPoint ledPosition(x,y,0.0);
 //            createLed(ledPosition);
 //        }
 //    }
-    
-    float x_offset_even = 0.127;
-    float x_offset_odd = 0.070;
-    float y_offset = 0.042;
-    int num_rows = 37;
-    int num_cols = 8;
-    
-    float w = 0.114;
-    float h = 0.0258;
-    
-    for(int i = 0; i< num_rows; i++){
-        for(int j = 0; j< num_cols; j++){
-            
-            float x = x_offset_odd + j*w;
-            
-            if(i%2==0){
-                x = x_offset_even + j*w;
-            }
-            
-            float y = y_offset + i*h;
-            
-            ofPoint ledPosition(x,y,0.0);
-            createLed(ledPosition);
-        }
-    }
     
 }
 
